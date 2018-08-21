@@ -4,3 +4,6 @@
 [submodule "pack/myplugins/start/asyncrun"]
 	path = pack/myplugins/start/asyncrun
 	url = https://github.com/skywind3000/asyncrun.vim.git
+[submodule "pack/myplugins/opt/surround"]
+	path = pack/myplugins/opt/surround
+	url = https://github.com/tpope/vim-surround.git
