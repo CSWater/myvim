@@ -1,0 +1,6 @@
+[submodule "pack/myplugins/start/nerdtree"]
+	path = pack/myplugins/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "pack/myplugins/start/asyncrun"]
+	path = pack/myplugins/start/asyncrun
+	url = https://github.com/skywind3000/asyncrun.vim.git
