@@ -7,3 +7,6 @@
 [submodule "pack/myplugins/opt/surround"]
 	path = pack/myplugins/opt/surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "pack/myplugins/opt/youcompleteme"]
+	path = pack/myplugins/opt/youcompleteme
+	url = https://github.com/Valloric/YouCompleteMe.git
