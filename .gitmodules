@@ -7,3 +7,6 @@
 [submodule "pack/myplugins/opt/surround"]
 	path = pack/myplugins/opt/surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "pack/myplugins/start/gutentags"]
+	path = pack/myplugins/start/gutentags
+	url = https://github.com/ludovicchabant/vim-gutentags.git

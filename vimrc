@@ -4,6 +4,9 @@ set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 "enable syntax highlight and completion
 syntax on
 filetype on
+filetype plugin on
+filetype indent on
+autocmd FileType python setlocal shiftwidth=2 tabstop=2 expandtab
 
 "Default Indentation
 set visualbell
@@ -29,7 +32,6 @@ set smartcase
 set noswapfile
 set rtp+=~/.fzf
 set background=dark
-set foldmethod=indent
 colorscheme gruvbox
 "set mouse=a
 
@@ -40,8 +42,10 @@ if &term =~ '256color'
   set t_ut=
 endif
 
-
-
+let $GTAGSLABEL = 'native-pygments'
+let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project']
+let g:gutentags_ctags_tagfile = '.tags'
+let g:gutentags_cache_dir = expand('~/.cache/tags')
 "key map
 map Y y$
 map bn :bn
@@ -65,8 +69,6 @@ let g:ycm_autoclose_preview_window_after_completion=1
 nnoremap ga :YcmCompleter GoToDeclaration<CR>
 nnoremap gs :YcmCompleter GoToDefinition <CR>
 "nnoremap gd :YcmCompleter GetType<CR>
-"c.vim
-filetype plugin on
 
 "asyncrun_open
 let g:asyncrun_open=8
