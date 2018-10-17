@@ -21,6 +21,7 @@ set ruler       "use ruler
 set scrolloff=5
 set showcmd     "show command
 set nocompatible    "close compatiblity with vi
+set backspace=indent,eol,start
 set expandtab   "replace tab with space
 set nobackup        "close backup
 set showmode        "show the mode
