@@ -7,6 +7,8 @@ filetype on
 filetype plugin on
 filetype indent on
 autocmd FileType python setlocal shiftwidth=2 tabstop=2 expandtab
+"Plugin 'SirVer/ultisnips'
+
 
 "Default Indentation
 set visualbell
@@ -66,6 +68,11 @@ let g:ycm_add_preview_to_completeopt=1
 let g:ycm_autoclose_preview_window_after_insertion=1
 let g:ycm_autoclose_preview_window_after_completion=1
 "let g:ycm_global_ycm_extra_conf='/home/scy/.vim/pack/myplugins/opt/youcompleteme/third_party/ycmd/.ycm_extra_conf.py'
+"ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="horizontal"
 
 nnoremap ga :YcmCompleter GoToDeclaration<CR>
 nnoremap gs :YcmCompleter GoToDefinition <CR>

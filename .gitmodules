@@ -10,6 +10,6 @@
 [submodule "pack/myplugins/start/gutentags"]
 	path = pack/myplugins/start/gutentags
 	url = https://github.com/ludovicchabant/vim-gutentags.git
-[submodule "pack/myplugins/opt/utiisnips"]
-	path = pack/myplugins/opt/utiisnips
+[submodule "pack/myplugins/start/ultisnips"]
+	path = pack/myplugins/start/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
