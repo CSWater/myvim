@@ -52,6 +52,7 @@ let g:gutentags_cache_dir = expand('~/.cache/tags')
 "key map
 map Y y$
 map bn :bn
+map bp :bp
 map <C-e> :NERDTree<CR>
 
 
@@ -64,12 +65,14 @@ let Tlist_File_Fold_Auto_close = 1
 let Tlist_GainFocus_On_ToggleOpne = 1
 let Tlist_Exit_OnlyWindow = 1
 let NERDTreeWinSize=20
+"ycm
 let g:ycm_add_preview_to_completeopt=1
 let g:ycm_autoclose_preview_window_after_insertion=1
 let g:ycm_autoclose_preview_window_after_completion=1
-"let g:ycm_global_ycm_extra_conf='/home/scy/.vim/pack/myplugins/opt/youcompleteme/third_party/ycmd/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf="~/.vim/.ycm_extra_conf.py"
+
 "ultisnips
-let g:UltiSnipsExpandTrigger="<tab><tab>"
+let g:UltiSnipsExpandTrigger="<c-e>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="horizontal"
