@@ -13,3 +13,12 @@
 [submodule "pack/myplugins/start/ultisnips"]
 	path = pack/myplugins/start/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
+[submodule "pack/myplugins/start/tagbar"]
+	path = pack/myplugins/start/tagbar
+	url = https://github.com/majutsushi/tagbar.git
+[submodule "pack/myplugins/start/gutentags_plus"]
+	path = pack/myplugins/start/gutentags_plus
+	url = https://github.com/skywind3000/gutentags_plus.git
+[submodule "pack/myplugins/start/leaderf"]
+	path = pack/myplugins/start/leaderf
+	url = https://github.com/Yggdroot/LeaderF.git
