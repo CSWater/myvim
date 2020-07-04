@@ -9,11 +9,16 @@ filetype indent on
 autocmd FileType python setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr>
 autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
+"augroup extra_filetypes
+"  autocmd!
+"  au BufNewFile,BufRead *.cu           set      ft=cuda
+"  au BufNewFile,BufRead *.cuh          set      ft=cuda
+"augroup END
 "Plugin 'SirVer/ultisnips'
 
 
 "Default Indentation
-set visualbell
+"set visualbell
 set autoindent
 set smartindent   "indent when
 set cindent
@@ -38,6 +43,7 @@ set noswapfile
 set smartcase ignorecase
 set rtp+=~/.fzf
 set background=dark
+set colorcolumn=80
 let mapleader=","
 colorscheme gruvbox
 "set mouse=a
@@ -50,14 +56,12 @@ if &term =~ '256color'
 endif
 
 
-
 "key map
 map Y y$
-nmap bn :bn
-nmap bp :bp
 map <leader>e :NERDTreeToggle<CR>
 map <F8> :TagbarToggle<CR>
 map <F7> :AsyncRun! grep -rn <cword> .
+map <leader>f :LeaderfFunction<CR>
 nmap T <C-w>gF
 
 
@@ -95,8 +99,9 @@ let g:asyncrun_open=8
 
 "gutentags
 " 禁用 gutentags 自动加载 gtags 数据库的行为
-let $GTAGSCONF = '/usr/local/share/gtags/gtags.conf'
-"let $GTAGSLABEL = 'native-pygments'
+"let $GTAGSCONF = '/usr/local/share/gtags/gtags.conf'
+let $GTAGSLABEL = 'native-pygments'
+let $GTAGSCONF = '/usr/share/doc/global/examples/gtags.conf'
 
 let g:gutentags_modules = []
 let g:gutentags_project_root = ['.root', '.svn', '.git', '.project']
@@ -106,20 +111,29 @@ let g:gutentags_auto_add_gtags_cscope = 0
 let g:gutentags_define_advanced_commands = 1
 let g:gutentags_trace=0
 
-if executable('ctags')
-    let g:gutentags_modules += ['ctags']
-endif
+"if executable('ctags')
+"    let g:gutentags_modules += ['ctags']
+"endif
 if executable('gtags') && executable('gtags-cscope')
     let g:gutentags_modules += ['gtags_cscope']
 endif
 " 配置 ctags 的参数
-let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
-let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
-let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
+"let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
+"let g:gutentags_ctags_extra_args += ['--langmap=c++:+.cu']
+"let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
+"let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 
 "leaderf
-"let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
-"let g:Lf_CacheDirectory = expand('~/.vim/cache')
+let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
+let g:Lf_Ctags = "/home/scy/software/universal-ctags/bin/ctags"
+"let g:Lf_CacheDirectory = expand('~/LfCache')
+"let g:Lf_CtagsFuncOpts = {
+"            \ 'cpp': '--c-kinds=fp,--langmap=c++:+.cu',
+"            \ 'rust': '--rust-kinds=f',
+"            \ }
+"let g:Lf_CtagsFuncOpts = {'--langmap=c++:+.cu'}
+"let g:Lf_Gtagsconf =  '/usr/share/doc/global/examples/gtags.conf'
+"let g:Lf_Gtagslabel = 'native-pygments'
 
 
 """"""""""""""""""""" vim标签配置 begin """"""""""""""""""""""
