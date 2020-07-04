@@ -101,7 +101,8 @@ let g:asyncrun_open=8
 " 禁用 gutentags 自动加载 gtags 数据库的行为
 "let $GTAGSCONF = '/usr/local/share/gtags/gtags.conf'
 let $GTAGSLABEL = 'native-pygments'
-let $GTAGSCONF = '/usr/share/doc/global/examples/gtags.conf'
+"let $GTAGSCONF = '/usr/share/doc/global/examples/gtags.conf'
+let $GTAGSCONF = '/home/scy/.vim/gtags.conf'
 
 let g:gutentags_modules = []
 let g:gutentags_project_root = ['.root', '.svn', '.git', '.project']
@@ -111,17 +112,9 @@ let g:gutentags_auto_add_gtags_cscope = 0
 let g:gutentags_define_advanced_commands = 1
 let g:gutentags_trace=0
 
-"if executable('ctags')
-"    let g:gutentags_modules += ['ctags']
-"endif
 if executable('gtags') && executable('gtags-cscope')
     let g:gutentags_modules += ['gtags_cscope']
 endif
-" 配置 ctags 的参数
-"let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
-"let g:gutentags_ctags_extra_args += ['--langmap=c++:+.cu']
-"let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
-"let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 
 "leaderf
 let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
