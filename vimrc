@@ -92,12 +92,8 @@ let g:asyncrun_open=8
 "set cscopeprg='gtags-cscope' " 使用 gtags-cscope 代替 cscope
 
 "gutentags
-" 禁用 gutentags 自动加载 gtags 数据库的行为
-"let $GTAGSCONF = '/usr/local/share/gtags/gtags.conf'
 let $GTAGSLABEL = 'native-pygments'
-"let $GTAGSCONF = '/usr/share/doc/global/examples/gtags.conf'
 let $GTAGSCONF = '/home/scy/.vim/gtags.conf'
-
 let g:gutentags_modules = []
 let g:gutentags_project_root = ['.root', '.svn', '.git', '.project']
 let g:gutentags_ctags_tagfile = '.tags'
@@ -105,22 +101,12 @@ let g:gutentags_cache_dir = expand('~/.cache/tags')
 let g:gutentags_auto_add_gtags_cscope = 0
 let g:gutentags_define_advanced_commands = 1
 let g:gutentags_trace=0
-
 if executable('gtags') && executable('gtags-cscope')
     let g:gutentags_modules += ['gtags_cscope']
 endif
 
 "leaderf
 let g:Lf_RootMarkers = ['.project', '.root', '.svn', '.git']
-let g:Lf_Ctags = "/home/scy/software/universal-ctags/bin/ctags"
-"let g:Lf_CacheDirectory = expand('~/LfCache')
-"let g:Lf_CtagsFuncOpts = {
-"            \ 'cpp': '--c-kinds=fp,--langmap=c++:+.cu',
-"            \ 'rust': '--rust-kinds=f',
-"            \ }
-"let g:Lf_CtagsFuncOpts = {'--langmap=c++:+.cu'}
-"let g:Lf_Gtagsconf =  '/usr/share/doc/global/examples/gtags.conf'
-"let g:Lf_Gtagslabel = 'native-pygments'
 
 
 """"""""""""""""""""" vim标签配置 begin """"""""""""""""""""""
