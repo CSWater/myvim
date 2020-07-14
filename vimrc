@@ -1,7 +1,7 @@
-"encoding detection
+""encoding detection
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
-
-"enable syntax highlight and completion
+""
+"""enable syntax highlight and completion
 syntax on
 filetype on
 filetype plugin on
@@ -9,8 +9,6 @@ filetype indent on
 autocmd FileType python setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr>
 autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
-
-
 
 "Default Indentation
 "set visualbell
@@ -43,12 +41,12 @@ let mapleader=","
 colorscheme gruvbox
 "set mouse=a
 
-if &term =~ '256color'
+"if &term =~ '256color'
   " disable Background Color Erase (BCE) so that color schemes
   " render properly when inside 256-color tmux and GNU screen.
   " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
-  set t_ut=
-endif
+"  set t_ut=
+"endif
 
 
 "key map
@@ -171,4 +169,4 @@ if exists("+showtabline")
     set stal=2
     set tabline=%!MyTabLine()
 endif
-""""""""""""""""""""" vim标签配置 end """"""""""""""""""""""
+"""""""""""""""""""""" vim标签配置 end """"""""""""""""""""""
